@@ -7,7 +7,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var backgroundImg;
 
-var bg ;
+var bg , hour ;
 
 function preload() {
     getBackgroundImg( );
@@ -24,9 +24,9 @@ function setup(){
 function draw(){
 
     // add condition to check if any background image is there to add
-    if(backgroundImg){
+    if(backgroundImg)
         background(backgroundImg);
-    }
+    
 
     Engine.update(engine);
 
@@ -88,3 +88,4 @@ async function getBackgroundImg(){
 
     //load the image in backgroundImg variable here
     backgroundImg = loadImage(bg);
+}
